@@ -45,6 +45,60 @@ class CardDetails extends StatelessWidget {
               color: Colors.grey,
               fontWeight: FontWeight.w500,
             ),
+          ),
+          SizedBox(
+            height: 80,
+          ),
+          SliderTheme(
+            data: SliderTheme.of(context).copyWith(
+                trackHeight: 4,
+                thumbShape: const RoundSliderThumbShape(
+                  disabledThumbRadius: 4,
+                  enabledThumbRadius: 4,
+                ),
+                overlayShape: RoundSliderOverlayShape(
+                  overlayRadius: 10,
+                ),
+                activeTrackColor: Colors.blue,
+                inactiveTickMarkColor: Colors.grey.withOpacity(0.5),
+                thumbColor: Colors.grey,
+                overlayColor: Colors.grey),
+            child: Padding(
+              padding: const EdgeInsets.all(38.0),
+              child: Slider(
+                value: 0.1,
+                onChanged: (value) {},
+              ),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                onPressed: () {},
+                iconSize: 40,
+                icon: Icon(
+                  Icons.skip_next,
+                  color: Colors.blue,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                iconSize: 40,
+                icon: Icon(
+                  Icons.play_circle,
+                  color: Colors.blue,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                iconSize: 40,
+                icon: Icon(
+                  Icons.skip_previous,
+                  color: Colors.blue,
+                ),
+              )
+            ],
           )
         ],
       ),
